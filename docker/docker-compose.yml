@@ -1,0 +1,9 @@
+version: "3"
+services:
+  nexus:
+    ports:
+      - "8081:8180"
+  jenkins:
+    ports:
+      - "8080:8080"
+      - "50000:50000" // b7311ee7037c49e584640b0aa206b33c
