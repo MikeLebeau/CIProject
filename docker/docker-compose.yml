@@ -9,3 +9,14 @@ services:
     ports:
       - "8080:8080"
       - "50000:50000"
+  sonar:
+    image: sonarqube
+    ports:
+      - "9000:9000"
+      - "9092:9092"
+  gitlab:
+    image: gitlab/gitlab-ce
+    ports:
+      - "443:443"
+      - "80:80"
+
