@@ -1,9 +1,26 @@
 version: "3"
 services:
   nexus:
+    restart: on-failure
+    image: sonatype/nexus
     ports:
-      - "8081:8180"
+      - "8081:8081"
   jenkins:
+    restart: on-failure
+    image: jenkins
     ports:
       - "8080:8080"
-      - "50000:50000" // b7311ee7037c49e584640b0aa206b33c
+      - "50000:50000"
+  sonar:
+    restart: on-failure
+    image: sonarqube
+    ports:
+      - "9000:9000"
+      - "9092:9092"
+  gitlab:
+    restart: on-failure
+    image: gitlab/gitlab-ce
+    ports:
+      - "443:443"
+      - "80:80"
+
