@@ -20,8 +20,24 @@ Part wich contains the maven project
 
 Part wich contains the dockers
 
-Docker Jenkins
+Docker GitLab -> Greg
 
-Docker SonarQube
+Docker Jenkins -> Mike
 
-Docker Nexus
+Docker SonarQube -> Antoine
+
+Docker Nexus -> Mike
+
+## Tips
+
+### Share containers althrough several computers
+
+After running your container and mapping his ports, you have to 
+set the forwarding ports 
+
+> in VirtualBox : Configuration -> Network(NAT) -> Advanced
+-> add your IP address
+
+Then on your firewall settings : 
+
+> On Windows : Add new inbound rules (use a port between 5000 and 5010 to avoid ESGI's blocked ports)
